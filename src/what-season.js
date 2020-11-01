@@ -19,7 +19,7 @@ module.exports = function getSeason(date) {
   };
   if(!date) return 'Unable to determine the time of year!';
   if (Object.prototype.toString.call(date) !== "[object Date]") {
-    throw new Error();
+    throw new CustomError('Not implemented');
   };
   let month = date.getMonth();
   return season[month];
